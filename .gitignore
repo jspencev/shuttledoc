@@ -1,6 +1,10 @@
+/.nyc_output
 /.vscode
-/.envrc
+/coverage/code/*
+!/coverage/code/all
 /node_modules
+/test/tmp
+/.envrc
 /jsconfig.json
 /tmp.js
 /tmp2.js
