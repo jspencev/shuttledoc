@@ -1,5 +1,6 @@
 /.vscode
 /.envrc
 /node_modules
+/jsconfig.json
 /tmp.js
 /tmp2.js
