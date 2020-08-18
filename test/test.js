@@ -15,13 +15,13 @@ async function test(config) {
   }
   var mocha = new Mocha(mochaOpts);
 
-  var filename = path.join(process.env.ROOT_PATH, './test/tmp/mainTestFile.js');
+  var filename = path.join(__dirname, '../', './test/tmp/mainTestFile.js');
   var suiteName = config.file || 'test/all.suite.js';
   var suiteFilename;
   if (path.isAbsolute(suiteName)) {
     suiteFilename = suiteName;
   } else {
-    suiteFilename = path.join(process.env.ROOT_PATH, suiteName);
+    suiteFilename = path.join(__dirname, '../', suiteName);
   }
   var lines = [
     "import run from '" + suiteFilename + "'",

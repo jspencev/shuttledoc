@@ -62,9 +62,9 @@ function mergeArgs(args, argv) {
 async function writeNycConfig(testFile) {
   if (testFile) {
     if (!path.isAbsolute(testFile)) {
-      testFile = path.join(process.env.ROOT_PATH, testFile);
+      testFile = path.join(__dirname, testFile);
     }
-    var rel = path.relative(process.env.ROOT_PATH, testFile);
+    var rel = path.relative(__dirname, testFile);
     if (rel !== 'test/all.suite.js') {
       var relDirs = rel.split('/');
       var filename = relDirs.pop();
@@ -78,7 +78,7 @@ async function writeNycConfig(testFile) {
         if (!testType) {
           testType = fileParts[0];
         }
-        var coveragePath = path.join(process.env.ROOT_PATH, COVERAGE_BASE, testType);
+        var coveragePath = path.join(__dirname, COVERAGE_BASE, testType);
         relDirs.map(function(dir) {
           srcPath = path.join(srcPath, dir);
         });
@@ -89,10 +89,10 @@ async function writeNycConfig(testFile) {
             fileBase += fp + '.';
           }
           fileBase = fileBase.slice(0, -1);
-          var files = await findFiles(path.join(process.env.ROOT_PATH, srcPath), fileBase);
+          var files = await findFiles(path.join(__dirname, srcPath), fileBase);
           var srcFile = files[0];
           if (srcFile) {
-            coveragePath = path.join(coveragePath, path.relative(process.env.ROOT_PATH, srcFile));
+            coveragePath = path.join(coveragePath, path.relative(__dirname, srcFile));
             process.env.NYC_CONFIG = JSON.stringify({
               include: makeInclude(files),
               reportDir: coveragePath
@@ -106,7 +106,7 @@ async function writeNycConfig(testFile) {
             });
           }
         } else {
-          var files = findFiles(path.join(process.env.ROOT_PATH, srcPath));
+          var files = findFiles(path.join(__dirname, srcPath));
           coveragePath = path.join(coveragePath, srcPath, 'suite');
           if (files.length > 0) {
             process.env.NYC_CONFIG = JSON.stringify({
