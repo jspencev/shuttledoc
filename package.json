@@ -1,0 +1,19 @@
+{
+  "name": "shuttledoc",
+  "version": "0.0.1",
+  "description": "Documentation coverage for JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jspencev/shuttledoc.git"
+  },
+  "author": "John Spence <john.spence.v@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jspencev/shuttledoc/issues"
+  },
+  "homepage": "https://github.com/jspencev/shuttledoc#readme"
+}
