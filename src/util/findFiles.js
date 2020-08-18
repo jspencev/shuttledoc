@@ -16,7 +16,7 @@ const EXTENSIONS = [
  * @returns {Promise<string[]>} - Array of absolute path files found.
  */
 
- export default async function(absolutePath, file) {
+ export default async function findFiles(absolutePath, file) {
    var files = [];
    if (file) {
     for (var i = 0; i < EXTENSIONS.length; i++) {

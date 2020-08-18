@@ -18,13 +18,17 @@
   "homepage": "https://github.com/jspencev/shuttledoc#readme",
   "dependencies": {
     "@babel/core": "^7.11.1",
+    "@babel/parser": "^7.11.3",
     "@babel/preset-env": "^7.11.0",
     "@babel/register": "^7.10.5",
     "app-root-path": "^3.0.0",
     "babel-plugin-module-resolver": "^4.0.0",
+    "comment-parser": "^0.7.6",
     "core-js": "^3.6.5",
     "glob": "^7.1.6",
     "inquirer": "^7.3.3",
+    "jsdoc-api": "^6.0.0",
+    "thenify": "^3.3.1",
     "thenify-all": "^1.6.0",
     "underscore": "^1.10.2"
   },

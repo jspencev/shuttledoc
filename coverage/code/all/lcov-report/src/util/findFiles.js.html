@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">80% </span>
+                <span class="strong">26.67% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>4/5</span>
+                <span class='fraction'>4/15</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">15.38% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>2/13</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>0/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">80% </span>
+                <span class="strong">28.57% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>4/5</span>
+                <span class='fraction'>4/14</span>
             </div>
         
             
@@ -55,7 +55,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -112,14 +112,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -127,8 +127,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var thenify = require('thenify');
@@ -149,14 +149,14 @@ const EXTENSIONS = [
  * @returns {Promise&lt;string[]&gt;} - Array of absolute path files found.
  */
 &nbsp;
- export default async function(absolutePath, file) {
-   var files = [];
+ export default <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >async function f</span></span>indFiles(absolutePath, file) {
+   var <span class="cstat-no" title="statement not covered" >files = [];</span>
    if (file) {
-    for (var i = 0; i &lt; EXTENSIONS.length; i++) {
-      var ext = EXTENSIONS[i];
-      var tryFile = file + ext;
-      var tryPath = path.join(absolutePath, tryFile);
-      matches = await glob(tryPath);
+    for (var <span class="cstat-no" title="statement not covered" >i = 0; i &lt; EXTENSIONS.length; <span class="cstat-no" title="statement not covered" >i++) {</span></span>
+      var <span class="cstat-no" title="statement not covered" >ext = EXTENSIONS[i];</span>
+      var <span class="cstat-no" title="statement not covered" >tryFile = file + ext;</span>
+      var <span class="cstat-no" title="statement not covered" >tryPath = path.join(absolutePath, tryFile);</span>
+<span class="cstat-no" title="statement not covered" >      matches = await glob(tryPath);</span>
       if (matches.length &gt;= 1) {
 <span class="cstat-no" title="statement not covered" >        files </span>= matches;
         break;
@@ -164,8 +164,8 @@ const EXTENSIONS = [
     }
     return files;
    } else {
-    var pattern = path.join(absolutePath, '**/*.js');
-    files = await glob(pattern);
+    var <span class="cstat-no" title="statement not covered" >pattern = path.join(absolutePath, '**/*.js');</span>
+<span class="cstat-no" title="statement not covered" >    files = await glob(pattern);</span>
     return files;
    }
  }</pre></td></tr></table></pre>
@@ -175,7 +175,7 @@ const EXTENSIONS = [
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Mon Aug 17 2020 19:54:16 GMT-0700 (Pacific Daylight Time)
+                at Tue Aug 18 2020 00:36:04 GMT-0700 (Pacific Daylight Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>
